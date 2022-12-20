@@ -42,7 +42,7 @@ services:
       --optimizer_use_condition_selectivity=1
       --optimizer_switch="rowid_filter=off"
     ports:
-      - "3306:3306"
+      - "3307:3306"
     env_file: env/db.env
     volumes:
       - dbdata:/var/lib/mysql
@@ -55,8 +55,8 @@ services:
   elasticsearch:
     image: markoshust/magento-elasticsearch:7.16-0
     ports:
-      - "9200:9200"
-      - "9300:9300"
+      - "9201:9200"
+      - "9301:9300"
     environment:
       - "discovery.type=single-node"
       ## Set custom heap size to avoid memory errors
