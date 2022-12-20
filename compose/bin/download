@@ -20,7 +20,7 @@ docker compose -f docker-compose.yml up -d
 bin/setup-composer-auth
 
 bin/fixowns
-
+bin/clinotty composer self-update
 bin/clinotty composer create-project --repository=https://repo.magento.com/ magento/project-"${EDITION}"-edition="${VERSION}" .
 
 
